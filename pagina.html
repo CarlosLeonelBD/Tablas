@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<script>
+    var frutas =[];
+    function mostrar_arreglo()
+    {
+        document.getElementById("mostrar").innerHTML = frutas;
+    }
+
+    function mostrar_tamano(){
+        let cantidad = frutas.length;
+        document.getElementById("mostrar").innerHTML = cantidad;
+    }
+
+    function agregar_texto(elemento){
+        var tableBody = document.querySelector("#mostrar ");
+
+            var fila = document.createElement("tr");
+            var celdaElemento = document.createElement("td");
+            celdaElemento.textContent = document.getElementById("Tweet").value;
+
+            var celdaAccion = document.createElement("td");
+            var botonEliminar = document.createElement("button");
+            botonEliminar.textContent = "Eliminar";
+            botonEliminar.addEventListener("click", function() {
+                eliminarFila(fila);
+            });
+
+            celdaAccion.appendChild(botonEliminar);
+            fila.appendChild(celdaElemento);
+            fila.appendChild(celdaAccion);
+
+            tableBody.appendChild(fila);
+        
+    }
+</script>
+<body >
+    <header>
+        <h1>UNIVERSIDAD MARIANO GALVEZ</h1>
+    </header>
+    <div class="contenedor" >
+        <div class="morado"></div>
+        <div class="blanco"></div>
+        <div class="contenido" onload="mostrar_arreglo()">
+            <div class="opciones">
+                <section class="titulo">
+                    <h1>Tweet</h1>
+                </section>
+                <section class="subtitulo">
+                    <h3>Que estas pensando?</h3>
+                </section>
+                <section class="input">
+                    <input type="text" name="Tweeta" id="Tweet">
+                    <input type="button" value="AGREGAR" id="Agregar" onclick="agregar_texto()">
+                </section>
+            </div>
+            <div class="tabla">
+                <h4>RESULTADO</h4>
+                <table id="mostrar">
+                    <thead>
+                        <tr>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se agregarán las filas de datos -->
+                    </tbody>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

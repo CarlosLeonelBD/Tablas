@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-family: segoe UI;
+    font-size: 10px;
+    margin-left: 35px;
+}
+.contenedor{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.morado{
+    background: rgb(35, 2, 156);
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+}
+.blanco{
+    z-index: -1;
+    position: absolute;
+}
+.contenido{
+    background: white;
+    position: absolute;
+    display:flex;
+    height: 450px;
+    width: 70%;
+    z-index: 1;
+    margin-left: 15%;
+    margin-top: 80px;
+    
+    
+}
+.titulo h1{
+    font-family: segoe UI;
+    font-size: 50px;
+    margin: 30px;
+}
+.subtitulo h3{
+    font-family: segoe UI;
+    font-size: 30px;
+    padding: 0;
+    margin: 30px;
+    margin-top: 10px;
+    font-weight: 200;
+}
+.input input{
+    margin: 30px;
+    margin-top: 20px;
+    display: block;
+}
+
+#Agregar{
+    height: 35px;
+    width: 150px;
+    background: rgb(4, 187, 4);
+    border: none;
+    border-radius: 15px;
+}
+
+#Tweet{
+    height: 35px;
+    width: 350px;
+    border-radius: 5px;
+    border-width: 1px;
+    font-weight: 200;
+    font-size: 24px;
+}
+.opciones{
+    margin: 0;
+    
+}
+.tabla h4{
+    font-family: segoe UI;
+    font-size: 24px; 
+    font-weight: 100;
+    margin-left: 50px;
+}
